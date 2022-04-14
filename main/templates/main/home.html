@@ -41,7 +41,7 @@
 
       <div class="profile">
         <img src=" {% static 'assets/img/profile-img.jpg' %} " alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="home.html">Santhanabalan V</a></h1>
+        <h1 class="text-light"><a href="#hero">Santhanabalan V</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://twitter.com/SanthanabalanV" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/profile.php?id=100004610657324" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -603,8 +603,8 @@
             </div>        
           </div>
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="{% url 'main:home' %}" method="post" role="form" class="php-email-form">
-              {% csrf_token %}
+            <form action="" method="post" role="form" class="php-email-form">
+              {% csrf_token %}              
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -629,6 +629,7 @@
                 <div class="sent-message">Your message has been sent. Thank you!{{ name }}</div>
               </div>-->
               <div class="text-center"><button type="submit">Send Message</button></div>
+              <!--<div class="text-center"><input type="submit" value="Submit"></div>-->
             </form>
           </div>
 

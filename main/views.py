@@ -1,16 +1,16 @@
 import email
 from django.shortcuts import render
+from .forms import ContactForm
 
 def home (request):
-    if request.method == "POST":
-        name= request.POST['name']
-        email= request.POST['email']
-        subject= request.POST['subject']
-        message= request.POST['message']
-
-        return render(request, 'main/home.html',{'name':name})
-    else:
-        return render(request, 'main/home.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'main/home.html')
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'main/home.html', context)
 
 def certificates (request): 
     return render(request, 'main/certificates.html')
