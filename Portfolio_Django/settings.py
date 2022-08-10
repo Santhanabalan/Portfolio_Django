@@ -176,6 +176,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # EMAIL_HOST_PASSWORD ='xxxxx'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+
+
  # Debugging in heroku live
 LOGGING = {
     'version': 1,
