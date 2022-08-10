@@ -168,7 +168,7 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 LOGIN_REDIRECT_URL = 'main:dashboard'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'main:home'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'main:index'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
