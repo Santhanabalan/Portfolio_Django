@@ -1,12 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Santhanabalan V</title>
+  <title>{% block head_title %}{% endblock %}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,6 +27,13 @@
 
   <!-- Template Main CSS File -->
   <link href=" {% static 'assets/css/style.css' %} " rel="stylesheet">
+  <style>
+    .form-group {
+		margin-top: 10px;
+    }
+  </style>
+  {% block extra_head %}
+  {% endblock %}
 </head>
 
 <body>
@@ -40,7 +47,7 @@
 
       <div class="profile">
         <img src=" {% static 'assets/img/profile-img.jpg' %} " alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href=" {% static 'home.html' %} ">Alex Smith</a></h1>
+        <h1 class="text-light"><a href=" {% static 'home.html' %} ">Santhanabalan V</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://twitter.com/SanthanabalanV" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/profile.php?id=100004610657324" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -59,7 +66,6 @@
           <li><a href="/certificates" class="nav-link scrollto"><i class="bx bx-certification"></i> <span>Certificates</span></a></li>
           <!-- <li><a href=" {% static '#services' %} " class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
           <li><a href="/index#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-          <li><a href="/accounts/login/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -67,70 +73,39 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="certificates" class="portfolio section-bg">
       <div class="container">
+		{% block body %}
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details</h2>
-          <ol>
-            <li><a href=" {% static 'home.html' %} ">Home</a></li>
-            <li>Portfoio Details</li>
-          </ol>
-        </div>
+    {% if messages %}
+      <div class="p-2">
+        {% for message in messages %}
+          <div class="text-center border-bottom">{{message}}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="p-3 mb-3 bg-dark">
+      <div class="container d-flex justify-content-between">
+          {% if user.is_authenticated %}
+          <div><a class="text-light" href="{% url 'account_email' %}">Change E-mail</a></div>
+          <div><a class="text-light" href="{% url 'home' %}">Home</a></div>
+          <div><a class="text-light" href="{% url 'account_logout' %}">Sign Out</a></div>
+          {% else %}
+          <div><a class="text-light" href="{% url 'account_login' %}">Sign In</a></div>
+          <div><a class="text-light" href="{% url 'account_signup' %}">Sign Up</a></div>
+          {% endif %}
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
 
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper-container">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src=" {% static 'assets/img/portfolio/portfolio-details-1.jpg' %} " alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src=" {% static 'assets/img/portfolio/portfolio-details-2.jpg' %} " alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src=" {% static 'assets/img/portfolio/portfolio-details-3.jpg' %} " alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design, App Development, AI/ML.</li>
-                <li><strong>Client</strong>: For Personal Purpose.</li>
-                <li><strong>Project date</strong>: 2020-Present</li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/Santhanabalan">Github-Santhanabalan</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Portfolio Details</h2>
-              <p>
-                Projects done by me during my learning stage in KiC.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
+    </section><!-- End Portfolio Section -->
 
   </main><!-- End #main -->
 
