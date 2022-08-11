@@ -33,4 +33,4 @@ def temp (request):
     return render(request, 'main/temp.html')
 
 def handle_not_found (request,exception):
-    return render(request, 'main/temp.html')
+    return render(request, 'main/404.html')
