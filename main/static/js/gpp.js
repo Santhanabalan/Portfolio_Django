@@ -2,7 +2,7 @@ $(document).ready(function() {
     $("form").hide();
   })
   
-  $("#inputState").change(function() {
+  $("#state").change(function() {
     stateChange($(this).val());
   });
   
@@ -10,9 +10,8 @@ $(document).ready(function() {
     $("form").hide();
   
     switch (stateValue) {
-      case '1':
+      case 'theory':
         $("#theory").show();;
-      case '2':
-        $("#embed").show();;
-    }
+      case 'embed':
+        $("#embed").show();;    }
   }
