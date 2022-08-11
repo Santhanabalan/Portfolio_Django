@@ -17,46 +17,20 @@ def certificates (request):
 def portfolio (request): 
     return render(request, 'main/portfolio-details.html')
 
-def speed (request): 
-    return render(request, 'main/speed.html')
 def dashboard (request):
     return render(request, 'main/dashboard.html')
 
-def login (request): 
-    return render(request, 'main/login.html')
+def sgpa (request):
+    return render(request, 'main/sgpa.html')
 
-def register (request): 
-    return render(request, 'main/register.html')
+def cgpa (request):
+    return render(request, 'main/cgpa.html')
 
-def forgotpassword (request): 
-    return render(request, 'main/forgot-password.html')
+def gpp (request):
+    return render(request, 'main/gpp.html')
 
-def blank (request): 
-    return render(request, 'main/blank.html')
+def temp (request):
+    return render(request, 'main/temp.html')
 
-def buttons (request): 
-    return render(request, 'main/buttons.html')
-
-def cards (request): 
-    return render(request, 'main/cards.html')
-
-def charts (request): 
-    return render(request, 'main/charts.html')
-
-def tables (request): 
-    return render(request, 'main/tables.html')
-
-def utilities_animation (request): 
-    return render(request, 'main/utilities-animation.html')
-
-def utilities_border (request): 
-    return render(request, 'main/utilities-border.html')
-
-def utilities_color (request): 
-    return render(request, 'main/utilities-color.html')
-
-def utilities_other (request): 
-    return render(request, 'main/utilities-color.html')
-
-def error (request): 
-    return render(request, 'main/404.html')
+def handle_not_found (request,exception):
+    return render(request, 'main/temp.html')

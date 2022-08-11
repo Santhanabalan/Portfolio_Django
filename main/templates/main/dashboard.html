@@ -55,21 +55,22 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                My Projects
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Grade Calculator</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="{% url 'main:buttons' %}">Buttons</a>
-                        <a class="collapse-item" href=" {% url 'main:cards' %} ">Cards</a>
+                        <h6 class="collapse-header">Grading made easy</h6>
+                        <a class="collapse-item" href="/sgpa">SGPA</a>
+                        <a class="collapse-item" href="/cgpa">CGPA</a>
+                        <a class="collapse-item" href="/gpp">Grade per Paper</a>
                     </div>
                 </div>
             </li>
@@ -78,27 +79,25 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Attendance Calculator</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href=" {% url 'main:utilities_color' %} ">Colors</a>
-                        <a class="collapse-item" href=" {% url 'main:utilities_border' %} ">Borders</a>
-                        <a class="collapse-item" href=" {% url 'main:utilities_animation' %} ">Animations</a>
-                        <a class="collapse-item" href=" {% url 'main:utilities_other' %} ">Other</a>
+                        <h6 class="collapse-header">Uff maintaining 75%</h6>
+                        <a class="collapse-item" href="/temp">Simple Calculator</a>
+                        <a class="collapse-item" href="/temp">MyCamu</a>
+                        <a class="collapse-item" href="/temp">Days to reach 75%</a>
                     </div>
                 </div>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Links
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -106,34 +105,16 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>My Websites</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href=" {% url 'main:login' %} ">Login</a>
-                        <a class="collapse-item" href=" {% url 'main:register' %} ">Register</a>
-                        <a class="collapse-item" href=" {% url 'main:forgotpassword' %} ">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href=" {% url 'main:404' %} ">404 Page</a>
-                        <a class="collapse-item" href=" {% url 'main:blank' %} ">Blank Page</a>
+                        <a class="collapse-item" href="https://santhanabalan.ml">Personal Site</a>
+                        <a class="collapse-item" href="/">Portfolio Page</a>
+                        <a class="collapse-item" href="https://vfc.herokuapp.com/main/">VFC</a>
                     </div>
                 </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href=" {% url 'main:charts' %} ">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href=" {% url 'main:tables' %} ">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
             </li>
 
             <!-- Divider -->
@@ -147,8 +128,8 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src=" {% static 'img/undraw_rocket.svg' %} " alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <p class="text-center mb-2"><strong>Got suggestions</strong> for the Website <strong>?</strong></p>
+                <a class="btn btn-success btn-sm" href="/#contact">Contact Me!</a>
             </div>
 
         </ul>
@@ -261,15 +242,15 @@
                         </li>
 
                         <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
+                                <i class="fas fa-envelope fa-fw"></i> -->
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
+                                <!-- <span class="badge badge-danger badge-counter">7</span>
+                            </a> -->
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
@@ -323,7 +304,7 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
+                            </div> -->
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -702,7 +683,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Santhanabalan 2022</span>
                     </div>
                 </div>
             </footer>
@@ -733,7 +714,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href=" {% url 'main:login' %} ">Logout</a>
+                    <a class="btn btn-primary" href="#">Logout</a>
                 </div>
             </div>
         </div>

@@ -5,6 +5,11 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
-    path('home/',TemplateView.as_view(template_name='dashboard/home.html'), name='home'),
+    path('profile/',TemplateView.as_view(template_name='account/profile.html'), name='profile'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 ="main.views.handle_not_found"
+# handler500 ="main.views.handle_not_found"
+handler403 ="main.views.handle_not_found"
+handler400 ="main.views.handle_not_found"
