@@ -304,8 +304,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div> -->
-                        </li>
+                            </div>
+                        </li> -->
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -354,8 +354,7 @@
                         </div>
                         <div class="card-body">
                             <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
-
-                            <form id="cgpa">
+                            <form>
                                 <div class="form-row" id="count">
                                     <div class="form-group col-md-6">
                                         <input type="text" class="form-control" id="sub" placeholder="Enter the Number of Courses in this semester:">
@@ -364,22 +363,20 @@
                                         <button id="addRow" type="button" onclick="addinputFields()" class="btn btn-info ">Submit</button>
                                     </div>
                                 </div> 
-                                
+                            </form>
+                            <form id="sgpa">
                                 <div class="form-row" id="clone1">
                                     <div class="form-group col-md-5">
-                                      <label for="inputZip">Course Credit</label>
-                                      <input type="number" class="form-control" id="cat1" placeholder="Total Credit">
+                                      <label for="cc">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc" min="0" placeholder="Total Credit">
                                     </div>
                                     <div class="form-group col-md-5">
-                                      <label for="inputZip">Course Grade</label>
-                                      <input type="number" class="form-control" id="cat2" min="0" max="10" placeholder="Out of 10">
+                                      <label for="cg">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg" min="0" max="10" placeholder="Out of 10">
                                     </div> 
                                 </div>
-                                <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary ">Calculate</button>
-                                </div>
-                            </form>
-                        
+                            </form>  
                         </div>
                     </div>
                 </div>
@@ -429,6 +426,8 @@
         </div>
     </div>
 
+    <script src=" {% static 'js/sgpa.js' %} "></script>
+    <script src=" {% static 'js/sgc.js' %} "></script>
     <!-- Bootstrap core JavaScript-->
     <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
     <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
@@ -445,7 +444,7 @@
     <!-- Page level custom scripts -->
     <script src=" {% static 'js/demo/chart-area-demo.js' %} "></script>
     <script src=" {% static 'js/demo/chart-pie-demo.js' %} "></script>
-    <script src=" {% static 'js/cgpa.js' %} "></script>
+    
 </body>
 
 </html>
