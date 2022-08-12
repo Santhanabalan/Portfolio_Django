@@ -346,9 +346,42 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">SGPA</h1>
+                        <h1 class="h3 mb-0 text-gray-800">CGPA</h1>
                     </div>
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for each subject</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
 
+                            <form id="sgpa">
+                                
+                                <div class="form-row">
+                                  <div class="form-group col-md-5">
+                                    <label for="inputZip">Course Credit</label>
+                                    <input type="number" class="form-control" id="cat1" placeholder="Total Credit">
+                                  </div>
+                                  <div class="form-group col-md-5">
+                                    <label for="inputZip">Course Grade</label>
+                                    <input type="number" class="form-control" id="cat2" min="0" max="10" placeholder="Out of 10">
+                                  </div>
+                                  <div class="form-group col-md-2">
+                                    <label for="inputZip">Remove</label>
+                                    <button button id="removeRow" type="button" class="form-control btn btn-danger ">Remove</button>
+                                  </div>  
+                                </div>
+
+                                <div id="newRow"></div>
+                                
+                                <button id="addRow" type="button" class="btn btn-info ">Add Course</button>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+                        
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -413,6 +446,7 @@
     <script src=" {% static 'js/demo/chart-area-demo.js' %} "></script>
     <script src=" {% static 'js/demo/chart-pie-demo.js' %} "></script>
 
+    <script src=" {% static 'js/sgpa.js' %} "></script>
 </body>
 
 </html>
