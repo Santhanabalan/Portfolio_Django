@@ -354,30 +354,109 @@
                         </div>
                         <div class="card-body">
                             <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
-                            <form>
-                                <div class="form-row" id="count">
-                                    <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" id="sub" placeholder="Enter the Number of Courses in this semester:">
+
+                            <form action="" method="post" role="form" id="sgpa">
+                                {% csrf_token %} 
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn1">Course I Name</label>
+                                        <input type="text" class="form-control" id="cn1" placeholder="Course Name">
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <button id="addRow" type="button" onclick="addinputFields()" class="btn btn-info ">Submit</button>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc1">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc1" min="0" placeholder="Total Credit">
                                     </div>
-                                </div> 
-                            </form>
-                            <form id="sgpa">
-                                <div class="form-row" id="clone1">
-                                    <div class="form-group col-md-5">
-                                      <label for="cc">Course Credit</label>
-                                      <input type="number" class="form-control" id="cc" min="0" placeholder="Total Credit">
+                                    <div class="form-group col-md-4">
+                                      <label for="cg1">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg1" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn2">Course II Name</label>
+                                        <input type="text" class="form-control" id="cn2" placeholder="Course Name">
                                     </div>
-                                    <div class="form-group col-md-5">
-                                      <label for="cg">Course Grade</label>
-                                      <input type="number" class="form-control" id="cg" min="0" max="10" placeholder="Out of 10">
+                                    <div class="form-group col-md-4">
+                                      <label for="cc2">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc2" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg2">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg2" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn3">Course III Name</label>
+                                        <input type="text" class="form-control" id="cn3" placeholder="Course Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc3">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc3" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg3">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg3" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn4">Course IV Name</label>
+                                        <input type="text" class="form-control" id="cn4" placeholder="Course Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc4">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc4" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg4">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg4" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn5">Course V Name</label>
+                                        <input type="text" class="form-control" id="cn5" placeholder="Course Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc5">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc5" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg5">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg5" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn6">Course VI Name</label>
+                                        <input type="text" class="form-control" id="cn6" placeholder="Course Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc6">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc6" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg6">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg6" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cn7">Course VII Name</label>
+                                        <input type="text" class="form-control" id="cn7" placeholder="Course Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cc7">Course Credit</label>
+                                      <input type="number" class="form-control" id="cc7" min="0" placeholder="Total Credit">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="cg7">Course Grade</label>
+                                      <input type="number" class="form-control" id="cg7" min="0" max="10" placeholder="Out of 10">
                                     </div> 
                                 </div>
                                     <button type="submit" id="submit" class="btn btn-primary ">Calculate</button>
                             </form>  
-                            <div id="output"></div>
                         </div>
                     </div>
                 </div>
@@ -427,8 +506,8 @@
         </div>
     </div>
 
-    <script src=" {% static 'js/sgpa.js' %} "></script>
-    <script src=" {% static 'js/sgc.js' %} "></script>
+    <!-- <script src=" {% static 'js/sgpa.js' %} "></script>
+    <script src=" {% static 'js/sgc.js' %} "></script> -->
     <!-- Bootstrap core JavaScript-->
     <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
     <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>

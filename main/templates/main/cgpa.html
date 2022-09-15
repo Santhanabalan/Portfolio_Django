@@ -355,7 +355,8 @@
                         <div class="card-body">
                             <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
 
-                            <form id="cgpa">
+                            <form action="" method="post" role="form" id="cgpa">
+                                {% csrf_token %} 
                                 <div class="form-row" id="count">
                                     <div class="form-group col-md-6">
                                         <input type="text" class="form-control" id="sub" placeholder="Enter the Number of Courses in this semester:">
@@ -429,7 +430,7 @@
         </div>
     </div>
 
-    <script src=" {% static 'js/cgpa.js' %} "></script>
+    <!-- <script src=" {% static 'js/cgpa.js' %} "></script> -->
     <!-- Bootstrap core JavaScript-->
     <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
     <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
