@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from main.forms import ContactForm,CgpaForm,SgpaForm
+from main.forms import ContactForm
 from allauth.account.decorators import login_required
 
 def index (request):
@@ -24,28 +24,11 @@ def dashboard (request):
 
 @login_required(login_url='/accounts/login') 
 def sgpa (request):
-    if request.method == 'POST':
-        form = SgpaForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'main/sgpa.html')
-    # else:
-    #     user = user_display
-    #     form = SgpaForm(initial={'name': user})
-    form = SgpaForm()
-    context = {'form': form}
-    return render(request, 'main/sgpa.html',context)
+    return render(request, 'main/sgpa.html')
 
 @login_required(login_url='/accounts/login') 
 def cgpa (request):
-    if request.method == 'POST':
-        form = CgpaForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'main/cgpa.html')
-    form = CgpaForm()
-    context = {'form': form}
-    return render(request, 'main/cgpa.html',context)
+    return render(request, 'main/cgpa.html')
 
 @login_required(login_url='/accounts/login') 
 def gpp (request):

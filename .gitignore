@@ -1,18 +1,13 @@
 # Distribution / packaging
 .Python
-.env/
-.venv/
-env/
 venv/
-*.env
+env/
 *.sqlite3
 .idea/
 # Project asset folders
 media/
-*.pyc
 # Database
 db.sqlite3
-staticfiles/
 # Editor directories and files
 .idea
 # Byte-compiled / optimized / DLL files

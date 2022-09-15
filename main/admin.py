@@ -1,6 +1,4 @@
 from django.contrib import admin
-from main.models import Contact,Cgpa,Sgpa
+from .models import Contact
 
 admin.site.register(Contact)
-admin.site.register(Cgpa)
-admin.site.register(Sgpa)
