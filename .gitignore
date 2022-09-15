@@ -1,7 +1,11 @@
 # Distribution / packaging
+.env
+.venv
 .Python
 venv/
 env/
+*.env
+*.pyc
 *.sqlite3
 .idea/
 # Project asset folders
@@ -14,3 +18,4 @@ db.sqlite3
 __pycache__/
 *.py[cod]
 *$py.class
+staticfiles/
