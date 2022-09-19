@@ -1,7 +1,5 @@
 from main import views
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
 
 app_name = 'main'
 
@@ -15,4 +13,4 @@ urlpatterns = [
     path('cgpa/', views.cgpa, name='cgpa'),
     path('gpp/', views.gpp, name='gpp'),
     path('temp/', views.temp, name='temp'),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
