@@ -1,7 +1,7 @@
 # Distribution / packaging
 .Python
 venv/
-env/
+.venv/
 *.sqlite3
 .idea/
 # Project asset folders
@@ -14,3 +14,8 @@ db.sqlite3
 __pycache__/
 *.py[cod]
 *$py.class
+#Railway
+*.env
+
+*.pyc
+staticfiles/

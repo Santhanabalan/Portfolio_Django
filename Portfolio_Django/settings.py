@@ -90,14 +90,14 @@ WSGI_APPLICATION = 'Portfolio_Django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'ciba',
-            'USER': 'postgres',
-            'PASSWORD':'santhanabalan',
-        }
-    }
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'ciba',
+#             'USER': 'postgres',
+#             'PASSWORD':'santhanabalan',
+#         }
+#     }
 
 # DATABASES = {
 #     'default': {
@@ -158,7 +158,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID = 0
+SITE_ID = 3
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
 
 
