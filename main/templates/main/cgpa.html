@@ -355,31 +355,47 @@
                         <div class="card-body">
                             <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
 
-                            <form id="cgpa">
-                                <div class="form-row" id="count">
-                                    <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" id="sub" placeholder="Enter the Number of Courses in this semester:">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <button id="addRow" type="button" onclick="addinputFields()" class="btn btn-info ">Submit</button>
-                                    </div>
-                                </div> 
-                                
+                            <form action="" method="POST">
+                                {% csrf_token %}
                                 <div class="form-row" id="clone1">
-                                    <div class="form-group col-md-5">
-                                      <label for="inputZip">Course Credit</label>
-                                      <input type="number" class="form-control" id="cat1" placeholder="Total Credit">
-                                    </div>
-                                    <div class="form-group col-md-5">
-                                      <label for="inputZip">Course Grade</label>
-                                      <input type="number" class="form-control" id="cat2" min="0" max="10" placeholder="Out of 10">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 1</label>
+                                      <input type="text" class="form-control" name="sem1" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 2</label>
+                                      <input type="text" class="form-control" name="sem2" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 3</label>
+                                      <input type="text" class="form-control" name="sem3" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 4</label>
+                                      <input type="text" class="form-control" name="sem4" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 5</label>
+                                      <input type="text" class="form-control" name="sem5" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 6</label>
+                                      <input type="text" class="form-control" name="sem6" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 7</label>
+                                      <input type="text" class="form-control" name="sem7" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Semester 8</label>
+                                      <input type="text" class="form-control" name="sem8" min="0" max="10" placeholder="Out of 10">
                                     </div> 
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary ">Calculate</button>
                                 </div>
                             </form>
-                        
+                            <h1> Result = {{cgpa}} </h1>
                         </div>
                     </div>
                 </div>
@@ -429,7 +445,7 @@
         </div>
     </div>
 
-    <script src=" {% static 'js/cgpa.js' %} "></script>
+    <!-- <script src=" {% static 'js/cgpa.js' %} "></script> -->
     <!-- Bootstrap core JavaScript-->
     <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
     <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
