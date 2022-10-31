@@ -14,4 +14,6 @@ urlpatterns = [
     path('gpp/', views.gpp, name='gpp'),
     path('temp/', views.temp, name='temp'),
     path('ise/', views.ise, name='ise'),
+    path('ise1/', views.ise1, name='ise1'),
+    path('ise2/', views.ise2, name='ise2'),
 ]
