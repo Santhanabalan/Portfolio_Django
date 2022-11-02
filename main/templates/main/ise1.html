@@ -350,10 +350,11 @@
                     </div>
                     <div class="card shadow mb-8">
                         <div class="card-header py-4">
-                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for first three semester</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for first four semester</h6>
                         </div>
                         <div class="card-body">
                             <p>This tool is used to calculate CGPA</p>
+                            <p>Details Extra Course can be entered at the end of ther form!</p>
                             <form action="" method="POST">
                                 {% csrf_token %}
                                 <br>
@@ -472,6 +473,7 @@
                                       
                                 </div>
                                 <h3>Semester 3 - ODD Junior Dec-2021</h3>
+                                <p>Include Engineering Clinics Results!</p>
                                 <div class="form-row" id="sem3">
                                     <div class="form-group col-md-6">
                                         <label for="inputZip">Course 1 Grade</label>
@@ -525,7 +527,74 @@
                                       <div class="form-group col-md-6">
                                         <label for="inputZip">Course 6 Credit</label>
                                         <input type="text" class="form-control" name="cc36" placeholder="Credits">
-                                      </div>   
+                                      </div>
+                                       
+                                </div>
+                                <h3>Semester 4 - Even Junior Jun-2022</h3>
+                                <p>Ignore EVS grade as it has no credits. Include Engineering Clinics Results!</p>
+                                <div class="form-row" id="sem3">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 1 Grade</label>
+                                        <input type="text" class="form-control" name="cg41" min="0" max="10" placeholder="Out of 10">
+                                      </div> 
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course 1 Credit</label>
+                                      <input type="text" class="form-control" name="cc41" placeholder="Credits">
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 2 Grade</label>
+                                        <input type="text" class="form-control" name="cg42" min="0" max="10" placeholder="Out of 10">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 2 Credit</label>
+                                        <input type="text" class="form-control" name="cc42" placeholder="Credits">
+                                      </div>
+                                      
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 3 Grade</label>
+                                        <input type="text" class="form-control" name="cg43" min="0" max="10" placeholder="Out of 10">
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 3 Credit</label>
+                                        <input type="text" class="form-control" name="cc43" placeholder="Credits">
+                                      </div>
+                                       
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 4 Grade</label>
+                                        <input type="text" class="form-control" name="cg44" min="0" max="10" placeholder="Out of 10">
+                                      </div> 
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 4 Credit</label>
+                                        <input type="text" class="form-control" name="cc44" placeholder="Credits">
+                                      </div>
+                                      
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 5 Grade</label>
+                                        <input type="text" class="form-control" name="cg45" min="0" max="10" placeholder="Out of 10">
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 5 Credit</label>
+                                        <input type="text" class="form-control" name="cc45" placeholder="Credits">
+                                      </div>
+                                      
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 6 Grade</label>
+                                        <input type="text" class="form-control" name="cg46" min="0" max="10" placeholder="Out of 10">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 6 Credit</label>
+                                        <input type="text" class="form-control" name="cc46" placeholder="Credits">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 7 Grade</label>
+                                        <input type="text" class="form-control" name="cg47" min="0" max="10" placeholder="Out of 10">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course 7 Credit</label>
+                                        <input type="text" class="form-control" name="cc47" placeholder="Credits">
+                                      </div>
+                                       
                                 </div>
                                 <h3>Enter Your Extra Course Details (E.g: 1 Credit, Language)</h3>
                                 <div class="form-row" id="ext">
