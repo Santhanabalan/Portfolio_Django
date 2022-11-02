@@ -10,6 +10,6 @@ urlpatterns = [
 ]
 
 handler404 ="main.views.handle_not_found"
-# handler500 ="main.views.handle_not_found"
+handler500 ="main.views.error_500"
 handler403 ="main.views.handle_not_found"
 handler400 ="main.views.handle_not_found"

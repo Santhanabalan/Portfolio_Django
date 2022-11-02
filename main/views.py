@@ -148,6 +148,9 @@ def temp (request):
 def handle_not_found (request,exception):
     return render(request, 'main/404.html')
 
+def error_500 (request):
+    return render(request, 'main/404.html')
+
 @login_required(login_url='/accounts/login') 
 def ise (request):
     if request.method == 'POST':

@@ -350,30 +350,31 @@
                     </div>
                     <div class="card shadow mb-8">
                         <div class="card-header py-4">
-                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for each subject</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">CGPA Calculator</h6>
                         </div>
                         <div class="card-body">
-                            <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
+                            <p>This tool is used to calculate CGPA using the SGPA values!</p>
                             <h4>First Calculate your SGPA for each semester using the <a href="/sgpa">SGPA tool</a>.</h4>
+                            <p>Enter the SGPA values of each semester in the respective fields</p>
 
                             <form action="" method="POST">
                                 {% csrf_token %}
                                 <div class="form-row" id="clone1">
                                     <div class="form-group col-md-6">
                                       <label for="inputZip">Semester 1</label>
-                                      <input type="text" class="form-control" name="sem1" min="0" max="10" placeholder="Out of 10" value="0">
+                                      <input type="text" class="form-control" name="sem1" min="0" max="10" placeholder="Out of 10" value="0" required>
                                     </div> 
                                     <div class="form-group col-md-6">
                                       <label for="inputZip">Semester 2</label>
-                                      <input type="text" class="form-control" name="sem2" min="0" max="10" placeholder="Out of 10" value="0">
+                                      <input type="text" class="form-control" name="sem2" min="0" max="10" placeholder="Out of 10" value="0" required>
                                     </div> 
                                     <div class="form-group col-md-6">
                                       <label for="inputZip">Semester 3</label>
-                                      <input type="text" class="form-control" name="sem3" min="0" max="10" placeholder="Out of 10" value="0">
+                                      <input type="text" class="form-control" name="sem3" min="0" max="10" placeholder="Out of 10" value="0" required>
                                     </div> 
                                     <div class="form-group col-md-6">
                                       <label for="inputZip">Semester 4</label>
-                                      <input type="text" class="form-control" name="sem4" min="0" max="10" placeholder="Out of 10" value="0">
+                                      <input type="text" class="form-control" name="sem4" min="0" max="10" placeholder="Out of 10" value="0" required>
                                     </div> 
                                     <!-- <div class="form-group col-md-6">
                                       <label for="inputZip">Semester 5</label>
