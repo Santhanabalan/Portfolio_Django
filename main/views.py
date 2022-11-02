@@ -162,7 +162,7 @@ def ise (request):
         cg45   = int(request.POST['cg45'])
         cc46   = int(request.POST['cc46'])
         cg46   = int(request.POST['cg46'])
-        tise= ((cc11*cg11)+(cc12*cg12)+(cc13*cg13)+(cc14*cg14)+(cc15*cg15)+(cc16*cg16)+(cc21*cg21)+(cc22*cg22)+(cc23*cg23)+(cc24*cg24)+(cc25*cg25)+(cc26*cg26)+(cc31*cg31)+(cc32*cg32)+(cc33*cg33)+(cc34*cg34)+(cc35*cg35)+(cc41*cg41)+(cc42*cg42)+(cc43*cg43)+(cc44*cg44)+(cc45*cg45))/(cc11+cc12+cc13+cc14+cc15+cc16+cc21+cc22+cc23+cc24+cc25+cc26+cc31+cc32+cc33+cc34+cc35+cc41+cc42+cc43+cc44+cc45+cc46)
+        tise= ((cc11*cg11)+(cc12*cg12)+(cc13*cg13)+(cc14*cg14)+(cc15*cg15)+(cc16*cg16)+(cc21*cg21)+(cc22*cg22)+(cc23*cg23)+(cc24*cg24)+(cc25*cg25)+(cc26*cg26)+(cc31*cg31)+(cc32*cg32)+(cc33*cg33)+(cc34*cg34)+(cc35*cg35)+(cc41*cg41)+(cc42*cg42)+(cc43*cg43)+(cc44*cg44)+(cc45*cg45)+(cc46*cg46))/(cc11+cc12+cc13+cc14+cc15+cc16+cc21+cc22+cc23+cc24+cc25+cc26+cc31+cc32+cc33+cc34+cc35+cc41+cc42+cc43+cc44+cc45+cc46)
         ise = round(tise, 2)
         return render(request, 'main/ise.html', {"ise": ise})
     else:
