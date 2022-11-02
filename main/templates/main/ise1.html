@@ -354,7 +354,6 @@
                         </div>
                         <div class="card-body">
                             <p>This tool is used to calculate CGPA</p>
-                            <p>Details Extra Course can be entered at the end of ther form!</p>
                             <form action="" method="POST">
                                 {% csrf_token %}
                                 <br>
@@ -595,17 +594,6 @@
                                         <input type="text" class="form-control" name="cc47" placeholder="Credits">
                                       </div>
                                        
-                                </div>
-                                <h3>Enter Your Extra Course Details (E.g: 1 Credit, Language)</h3>
-                                <div class="form-row" id="ext">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputZip">Extra Course 1 Grade</label>
-                                        <input type="text" class="form-control" name="eg1" min="0" max="10" placeholder="Out of 10">
-                                      </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="inputZip">Extra Course 1 Credit</label>
-                                        <input type="text" class="form-control" name="ec1" placeholder="Credits">
-                                      </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary ">Calculate</button>
