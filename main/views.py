@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from main.forms import ContactForm
 from allauth.account.decorators import login_required
+from itertools import islice
 
 def index (request):
     if request.method == 'POST':
@@ -25,19 +26,56 @@ def dashboard (request):
 @login_required(login_url='/accounts/login') 
 def sgpa (request):
     if request.method == 'POST':
-        cc1   = int(request.POST['cc1'])
-        cg1   = int(request.POST['cg1'])
-        cc2   = int(request.POST['cc2'])
-        cg2   = int(request.POST['cg2'])
-        cc3   = int(request.POST['cc3'])
-        cg3   = int(request.POST['cg3'])
-        cc4   = int(request.POST['cc4'])
-        cg4   = int(request.POST['cg4'])
-        cc5   = int(request.POST['cc5'])
-        cg5   = int(request.POST['cg5'])
-        cc6   = int(request.POST['cc6'])
-        cg6   = int(request.POST['cg6'])
-        sgpa= ((cc1*cg1)+(cc2*cg2)+(cc3*cg3)+(cc4*cg4)+(cc5*cg5)+(cc6*cg6))/(cc1+cc2+cc3+cc4+cc5+cc6)
+        cid = request.POST['cid']
+        if cid == '5':
+            cc1   = int(request.POST['cc1'])
+            cg1   = int(request.POST['cg1'])
+            cc2   = int(request.POST['cc2'])
+            cg2   = int(request.POST['cg2'])
+            cc3   = int(request.POST['cc3'])
+            cg3   = int(request.POST['cg3'])
+            cc4   = int(request.POST['cc4'])
+            cg4   = int(request.POST['cg4'])
+            cc5   = int(request.POST['cc5'])
+            cg5   = int(request.POST['cg5'])
+            tsgpa= ((cc1*cg1)+(cc2*cg2)+(cc3*cg3)+(cc4*cg4)+(cc5*cg5))/(cc1+cc2+cc3+cc4+cc5)
+            sgpa = round(tsgpa, 2)
+        elif cid == '6':
+            cc1   = int(request.POST['cc1'])
+            cg1   = int(request.POST['cg1'])
+            cc2   = int(request.POST['cc2'])
+            cg2   = int(request.POST['cg2'])
+            cc3   = int(request.POST['cc3'])
+            cg3   = int(request.POST['cg3'])
+            cc4   = int(request.POST['cc4'])
+            cg4   = int(request.POST['cg4'])
+            cc5   = int(request.POST['cc5'])
+            cg5   = int(request.POST['cg5'])
+            cc6   = int(request.POST['cc6'])
+            cg6   = int(request.POST['cg6'])
+            tsgpa= ((cc1*cg1)+(cc2*cg2)+(cc3*cg3)+(cc4*cg4)+(cc5*cg5)+(cc6*cg6))/(cc1+cc2+cc3+cc4+cc5+cc6)
+            sgpa = round(tsgpa, 2)
+        elif cid == '7':
+            cc1   = int(request.POST['cc1'])
+            cg1   = int(request.POST['cg1'])
+            cc2   = int(request.POST['cc2'])
+            cg2   = int(request.POST['cg2'])
+            cc3   = int(request.POST['cc3'])
+            cg3   = int(request.POST['cg3'])
+            cc4   = int(request.POST['cc4'])
+            cg4   = int(request.POST['cg4'])
+            cc5   = int(request.POST['cc5'])
+            cg5   = int(request.POST['cg5'])
+            cc6   = int(request.POST['cc6'])
+            cg6   = int(request.POST['cg6'])
+            cc7   = int(request.POST['cc7'])
+            cg7   = int(request.POST['cg7'])
+            tsgpa= ((cc1*cg1)+(cc2*cg2)+(cc3*cg3)+(cc4*cg4)+(cc5*cg5)+(cc6*cg6)+(cc7*cg7))/(cc1+cc2+cc3+cc4+cc5+cc6+cc7)
+            sgpa = round(tsgpa, 2)
+
+        else :
+            sgpa="Error"
+        
         return render(request, 'main/sgpa.html', {"sgpa": sgpa})
     else:
         return render(request, 'main/sgpa.html')
@@ -45,15 +83,12 @@ def sgpa (request):
 @login_required(login_url='/accounts/login') 
 def cgpa (request):
     if request.method == 'POST':
-        sem1   = float(request.POST['sem1'])
-        sem2   = float(request.POST['sem2'])
-        sem3   = float(request.POST['sem3'])
-        sem4   = float(request.POST['sem4'])
-        sem5   = float(request.POST['sem5'])
-        sem6   = float(request.POST['sem6'])
-        sem7   = float(request.POST['sem7'])
-        sem8   = float(request.POST['sem8'])
-        cgpa= (sem1+sem2+sem3+sem4+sem5+sem6+sem7+sem8)/8
+        cdata = request.POST.items()
+        data = list(cdata)
+        data.pop(0)
+        a = [float(i[1]) for i in data]
+        cgpa = sum(a) / len(a)
+            
         return render(request, 'main/cgpa.html', {"cgpa": cgpa})
     else:
         return render(request, 'main/cgpa.html')
