@@ -300,7 +300,7 @@ def onichans(request):
         time = d.strftime("%I:%M %p")
         today = date.today()
         date1 = today.strftime("%Y-%m-%d")
-        context = {'date': date1,'time':time}
+        context = {'date': date1,'time':time, 'name':name}
         subject = f'Outing Request Approved - {name} {roll}'
         html_message = render_to_string('main/onichanstemplate.html', context)
         plain_message = strip_tags(html_message)
