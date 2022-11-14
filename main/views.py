@@ -87,7 +87,8 @@ def cgpa (request):
         data = list(cdata)
         data.pop(0)
         a = [float(i[1]) for i in data]
-        cgpa = sum(a) / len(a)
+        cgpat = sum(a) / len(a)
+        cgpa = round(cgpat, 2)
             
         return render(request, 'main/cgpa.html', {"cgpa": cgpa})
     else:
