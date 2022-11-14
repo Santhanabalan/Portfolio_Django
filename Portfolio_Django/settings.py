@@ -178,7 +178,7 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'main:index'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST = 'smtp.office365.com'                   #'smtp-mail.outlook.com'
 EMAIL_HOST_USER = os.getenv('KCT_MAIL')
 EMAIL_HOST_PASSWORD = os.getenv('KCT_PASS')
 EMAIL_PORT = 587
