@@ -176,12 +176,14 @@ SOCIALACCOUNT_PROVIDERS = {
 LOGIN_REDIRECT_URL = 'main:dashboard'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'main:index'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'xxxxxxxxxxx@gmail.com'
-# EMAIL_HOST_PASSWORD ='xxxxx'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER = os.getenv('KCT_MAIL')
+EMAIL_HOST_PASSWORD = os.getenv('KCT_PASS')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_ENCRYPTION='STARTTLS'
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)

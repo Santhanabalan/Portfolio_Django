@@ -15,4 +15,5 @@ urlpatterns = [
     path('temp/', views.temp, name='temp'),
     path('ise/', views.dashboard, name='ise'),
     path('ise1/', views.ise, name='ise1'),
+    path('outpass/', views.outpass, name='outpass'),
 ]

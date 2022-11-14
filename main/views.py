@@ -2,6 +2,10 @@ from django.shortcuts import render
 from main.forms import ContactForm
 from allauth.account.decorators import login_required
 from itertools import islice
+from django.core import mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from datetime import datetime, date
 
 def index (request):
     if request.method == 'POST':
@@ -265,3 +269,21 @@ def ise1 (request):
         return render(request, 'main/ise1.html', {"ise": ise})
     else:
         return render(request, 'main/ise1.html')
+
+def outpass(request):
+    if request.method == "POST":
+        ttime = request.POST['time']
+        d = datetime.strptime(ttime, "%H:%M")
+        time = d.strftime("%I:%M %p")
+        today = date.today()
+        date1 = today.strftime("%Y-%m-%d")
+        context = {'date': date1,'time':time}
+        subject = 'Outing Request Approved - Santhanabalan V 20BIS038'
+        html_message = render_to_string('main/outpasstemplate.html', context)
+        plain_message = strip_tags(html_message)
+        from_email = 'hostelkct2@outlook.com'
+        to = 'santhanabalan.20is@kct.ac.in'
+        mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+        return render(request, 'main/outpass_form.html')
+    else:
+        return render(request, 'main/outpass_form.html')
