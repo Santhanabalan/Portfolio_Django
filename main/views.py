@@ -283,8 +283,8 @@ def outpass(request):
         subject = 'Outing Request Approved - Santhanabalan V 20BIS038'
         html_message = render_to_string('main/outpasstemplate.html', context)
         plain_message = strip_tags(html_message)
-        from_email = 'hostelkct2@outlook.com'
-        to = 'santhanabalan.20is@kct.ac.in'
+        from_email = 'Hostel KCT <hostelkct2@outlook.com>'
+        to = 'Santhanabalan V . 20BIS038 <santhanabalan.20is@kct.ac.in>'
         mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
         return render(request, 'main/outpass_form.html')
     else:
@@ -304,8 +304,9 @@ def onichans(request):
         subject = f'Outing Request Approved - {name} {roll}'
         html_message = render_to_string('main/onichanstemplate.html', context)
         plain_message = strip_tags(html_message)
-        from_email = 'hostelkct2@outlook.com'
-        to = email
+        from_email = 'Hostel KCT <hostelkct2@outlook.com>'
+        # to = email
+        to = f'{name} . {roll} <{email}>'
         mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
         return render(request, 'main/onichans.html')
     else:
