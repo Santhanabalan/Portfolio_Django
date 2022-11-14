@@ -6,6 +6,7 @@ from django.core import mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from datetime import datetime, date
+from django.contrib.admin.views.decorators import staff_member_required
 
 def index (request):
     if request.method == 'POST':
@@ -270,6 +271,7 @@ def ise1 (request):
     else:
         return render(request, 'main/ise1.html')
 
+@staff_member_required
 def outpass(request):
     if request.method == "POST":
         ttime = request.POST['time']
@@ -287,3 +289,24 @@ def outpass(request):
         return render(request, 'main/outpass_form.html')
     else:
         return render(request, 'main/outpass_form.html')
+
+def onichans(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        roll = request.POST['roll']
+        email = request.POST['email']
+        ttime = request.POST['time']
+        d = datetime.strptime(ttime, "%H:%M")
+        time = d.strftime("%I:%M %p")
+        today = date.today()
+        date1 = today.strftime("%Y-%m-%d")
+        context = {'date': date1,'time':time}
+        subject = f'Outing Request Approved - {name} {roll}'
+        html_message = render_to_string('main/onichanstemplate.html', context)
+        plain_message = strip_tags(html_message)
+        from_email = 'hostelkct2@outlook.com'
+        to = email
+        mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+        return render(request, 'main/onichans.html')
+    else:
+        return render(request, 'main/onichans.html')
