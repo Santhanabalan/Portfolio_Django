@@ -32,9 +32,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 if (Is_Production == 'False'):
     DEBUG = True
 else:
-    DEBUG = True
+    DEBUG = False
 
-ALLOWED_HOSTS = ['santhanabalan.ml','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['development.santhanabalan.ml','127.0.0.1','localhost']
 
 
 # Application definition
