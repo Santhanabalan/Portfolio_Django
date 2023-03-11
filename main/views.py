@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from .models import Contact,Project,Certificate
 # Create your views here.
 def index (request):
     if request.method == 'POST':
