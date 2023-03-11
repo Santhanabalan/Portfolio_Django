@@ -41,156 +41,18 @@
         </div>
 
         <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cs">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/cs1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/cs1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cs">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/cs2.jpeg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/cs2.jpeg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-udm">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/udm1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/udm1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fl">
+          {% for cert in certificates %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{cert.tag}}">
             <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/fl1.jpg' %} " class="img-fluid" alt="">
+              <img src="{{cert.img_src}}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/fl1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="{{cert.credential}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{cert.name}}"><i class="bx bx-plus"></i></a>
                 <a href="#" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-kct">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/kctiqube.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/kctiqube.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ms">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/ms1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/ms1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ms">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/ms2.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/ms2.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aws">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/aws1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/aws1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-kct">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/kctre1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/kctre1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-kct">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/kctre2.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/kctre2.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-kct">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/kctre3.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/kctre3.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-kct">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/kctsprout.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/kctsprout.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-gl">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/gl1.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/gl1.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-gl">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/gl2.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/gl2.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-gl">
-            <div class="portfolio-wrap">
-              <img src=" {% static 'img/certificates/gl3.jpg' %} " class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href=" {% static 'img/certificates/gl3.jpg' %} " data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
       </div>
