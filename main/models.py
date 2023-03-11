@@ -16,9 +16,14 @@ class Project(models.Model):
         ('app','App'),
         ('aiml','AI/ML'),
     )
+    id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=255)
     description = models.TextField()
-    img_src = models.URLField()
+    client = models.CharField(max_length=255)
+    date = models.DateField()
+    img_src1 = models.URLField()
+    img_src2 = models.URLField()
+    img_src3 = models.URLField()
     project_link = models.URLField()
     tag = models.CharField(max_length=200,choices=FILTER)
 

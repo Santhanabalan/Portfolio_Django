@@ -18,5 +18,7 @@ def certificates (request):
     context = {'certificates':certificates}
     return render(request, 'main/certificates.html', context)
 
-def portfolio_details (request): 
-    return render(request, 'main/portfolio-details.html')
+def portfolio_details (request,pk): 
+    project_detail = Project.objects.get(id=pk)
+    context = {'project_detail':project_detail}
+    return render(request, 'main/portfolio-details.html', context)

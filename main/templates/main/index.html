@@ -281,10 +281,10 @@
           {% for project in projects %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{project.tag}}">
             <div class="portfolio-wrap">
-              <img src="{{project.img_src}}" class="img-fluid" alt="">
+              <img src="{{project.img_src1}}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{{project.img_src}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{project.name}}"><i class="bx bx-plus"></i></a>
-                <a href="{{project.project_link}}" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="{{project.img_src1}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{project.name}}"><i class="bx bx-plus"></i></a>
+                <a href="{% url 'portfolio-details' project.id %}" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
