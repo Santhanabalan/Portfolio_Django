@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from .models import Project,Certificate
+from allauth.account.decorators import login_required
 # Create your views here.
 def index (request):
     projects=Project.objects.all()
@@ -22,3 +23,14 @@ def portfolio_details (request,pk):
     project_detail = Project.objects.get(id=pk)
     context = {'project_detail':project_detail}
     return render(request, 'main/portfolio-details.html', context)
+
+def dashboard (request):
+    return render(request, 'main/dashboard.html')
+
+@login_required
+def cgpa (request):
+    return render(request, 'main/cgpa.html')
+
+@login_required
+def sgpa (request):
+    return render(request, 'main/sgpa.html')

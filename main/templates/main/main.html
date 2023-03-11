@@ -59,7 +59,12 @@
           <li><a href="{% url 'certificates' %}" class="nav-link scrollto"><i class="bx bx-certification"></i> <span>Certificates</span></a></li>
           <li><a href="{% url 'index' %}#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="{% url 'index' %}#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-          <li><a href="{% url 'index' %}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'dashboard' %}" class="nav-link scrollto"><i class="bx bxs-dashboard"></i> <span>Dashboard</span></a></li>
+          <li><a href="{% url 'account_logout' %}" class="nav-link scrollto"><i class='bx bx-log-out' ></i> <span>Logout</span></a></li>
+          {% else %}
+          <li><a href="{% url 'account_login' %}" class="nav-link scrollto"><i class='bx bx-log-in' ></i><span>Login</span></a></li>
+          {% endif %}
         </ul>
       </nav><!-- .nav-menu -->
     </div>
