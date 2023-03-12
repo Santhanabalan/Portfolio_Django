@@ -29,12 +29,11 @@ Is_Production = os.getenv("IS_PRODUCTION")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if (Is_Production == 'False'):
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = bool(os.getenv('DEBUG')) == 'True'
 
 ALLOWED_HOSTS = ['development.santhanabalan.ml','127.0.0.1','localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://development.santhanabalan.ml','http://127.0.0.1','http://localhost']
 
 
 # Application definition
