@@ -1,0 +1,62 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="certificates" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Certificates</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Certificates</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="portfolio section-bg inner-page">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certifications</h2>
+          <p>Quote</p>
+        </div>
+
+        <div class="row aos-init aos-animate" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-cs" class="">Coursera</li>
+              <li data-filter=".filter-udm" class="">UDEMY</li>
+              <li data-filter=".filter-kct" class="">KCT</li>
+              <li data-filter=".filter-fl" class="">FutureLearn</li>
+              <li data-filter=".filter-gl" class="">Great Learning</li>
+              <li data-filter=".filter-aws" class="">AWS</li>
+              <li data-filter=".filter-ms" class="">Microsoft</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          
+          {% for cert in certificates %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{cert.tag}}">
+            <div class="portfolio-wrap">
+              <img src="{{cert.img_src}}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{{cert.credential}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{cert.name}}"><i class="bx bx-plus"></i></a>
+                <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+  {% endblock content %}

@@ -1,0 +1,202 @@
+{% extends 'dashboard/main.html' %}
+{% block content %}
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">SGPA</h1>
+                    </div>
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">SGPA Calculator</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to calculate SGPA for each semester</p>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Number of Courses</label>
+                                    <select id="inputState" class="form-control">
+                                    <option value="5" selected>5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <form action="" method="POST" id="5">
+                                {% csrf_token %}
+                                <div class="form-row" id="clone1">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Credit</label>
+                                      <input type="text" class="form-control" name="cc1" placeholder="Total Credit" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Grade</label>
+                                      <input type="text" class="form-control" name="cg1" min="0" max="10" placeholder="Out of 10" required>
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc2" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg2" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc3" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg3" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>  
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc4" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg4" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc5" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg5" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="hidden" name="cid" value="5" />
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+                            <form action="" method="POST" id="6">
+                                {% csrf_token %}
+                                <div class="form-row" id="clone1">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Credit</label>
+                                      <input type="text" class="form-control" name="cc1" placeholder="Total Credit" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Grade</label>
+                                      <input type="text" class="form-control" name="cg1" min="0" max="10" placeholder="Out of 10" required>
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc2" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg2" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc3" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg3" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>  
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc4" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg4" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc5" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg5" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc6" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg6" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="hidden" name="cid" value="6" />
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+                            <form action="" method="POST" id="7">
+                                {% csrf_token %}
+                                <div class="form-row" id="clone1">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Credit</label>
+                                      <input type="text" class="form-control" name="cc1" placeholder="Total Credit" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputZip">Course Grade</label>
+                                      <input type="text" class="form-control" name="cg1" min="0" max="10" placeholder="Out of 10" required>
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc2" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg2" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc3" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg3" min="0" max="10" placeholder="Out of 10" required>
+                                    </div>  
+                                    <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc4" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg4" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc5" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg5" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc6" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg6" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Credit</label>
+                                        <input type="text" class="form-control" name="cc7" placeholder="Total Credit" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputZip">Course Grade</label>
+                                        <input type="text" class="form-control" name="cg7" min="0" max="10" placeholder="Out of 10" required>
+                                      </div> 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="hidden" name="cid" value="7" />
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+                            
+                            <h1> Result = {{sgpa}} </h1>
+                            
+                        </div>
+                    </div>
+                </div>
+{% endblock content %}

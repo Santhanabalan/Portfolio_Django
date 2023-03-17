@@ -1,0 +1,111 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Grade per paper</h1>
+                    </div>
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for each subject</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to calculate Grades for single course based on the internal and semester marks</p>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Course Type</label>
+                                    <select id="inputState" class="form-control">
+                                    <option value="theory" selected>Theory Only</option>
+                                    <option value="embed">Embedded (Theory+Lab)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <form action="" method="POST" id="theory">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                  <div class="form-group col-md">
+                                    <label for="cname">Course Name</label>
+                                    <input type="name" class="form-control" name="cname" placeholder="Course Name" required>
+                                  </div>
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">CAT I</label>
+                                    <input type="number" class="form-control" name="cat1" min="0" max="50" placeholder="Out of 50" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">CAT II</label>
+                                    <input type="number" class="form-control" name="cat2" min="0" max="50" placeholder="Out of 50" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">Assignment 1</label>
+                                    <input type="number" class="form-control" name="as1" min="0" max="20" placeholder="Out of 20" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">Assignment 2</label>
+                                    <input type="number" class="form-control" name="as2" min="0" max="20" placeholder="Out of 20" required>
+                                  </div>
+                                  <div class="form-group col-md">
+                                    <label for="inputZip">End Semester Mark:</label>
+                                    <input type="number" class="form-control" name="ese" min="0" max="100" placeholder="Out of 100" required>
+                                  </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="hidden" name="cid" value="t" />
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+
+                            <form action="" method="POST" id="embed">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                  <div class="form-group col-md">
+                                    <label for="cname">Course Name</label>
+                                    <input type="name" class="form-control" name="cname" placeholder="Course Name" required>
+                                  </div>
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">CAT I</label>
+                                    <input type="number" class="form-control" name="cat1" min="0" max="50" placeholder="Out of 50" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">CAT II</label>
+                                    <input type="number" class="form-control" name="cat2" min="0" max="50" placeholder="Out of 50" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">Assignment 1</label>
+                                    <input type="number" class="form-control" name="as1" min="0" max="20" placeholder="Out of 20" required>
+                                  </div>
+                                  <div class="form-group col-md-3">
+                                    <label for="inputZip">Assignment 2</label>
+                                    <input type="number" class="form-control" name="as2" min="0" max="20" placeholder="Out of 20" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputZip">Lab Internal</label>
+                                    <input type="number" class="form-control" name="lbi" min="0" max="60" placeholder="Out of 60" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputZip">Lab End Semester Mark:</label>
+                                    <input type="number" class="form-control" name="lese" min="0" max="100" placeholder="Out of 100" required>
+                                  </div>
+                                  <div class="form-group col-md">
+                                    <label for="inputZip">End Semester Mark:</label>
+                                    <input type="number" class="form-control" name="ese" min="0" max="100" placeholder="Out of 100" required>
+                                  </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input type="hidden" name="cid" value="l" />
+                                    <button type="submit" class="btn btn-primary ">Calculate</button>
+                                </div>
+                            </form>
+                            <h3>Your Grade in {{name}} is {{Grade}}</h3>
+                        
+                        </div>
+                    </div>
+                </div>
+                <script src="{% static 'assets/js/gpp.js' %}"></script>
+{% endblock content %}

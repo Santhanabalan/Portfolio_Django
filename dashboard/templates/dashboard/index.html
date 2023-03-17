@@ -1,0 +1,63 @@
+{% extends 'dashboard/main.html' %}
+{% block content %}
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
+
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">Grade Calculator for each semester</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to grade for a given semester.</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="{% url 'sgpa' %}" class="btn btn-primary btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-flag"></i>
+                                    </span>
+                                    <span class="text">SGPA</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">CGPA Calculator</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to calculate cumulative Grades per annum.</p>
+                            <p>First Calculate your SGPA for each semester using the SGPA tool given above and then use this link.</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="{% url 'cgpa' %}" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-flag"></i>
+                                        </span>
+                                        <span class="text">CGPA</span>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-8">
+                        <div class="card-header py-4">
+                            <h6 class="m-0 font-weight-bold text-primary">CGPA Calculator for ISE Department</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>This tool is used to calculate cumulative Grades per annum.</p>
+                            <p>Specially designed for ISE students!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="{% url 'sgpa' %}" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-flag"></i>
+                                        </span>
+                                        <span class="text">CGPA</span>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+{% endblock content %}
+            
