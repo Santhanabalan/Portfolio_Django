@@ -34,9 +34,9 @@ if(os.getenv('DEBUG')=='True'):
 else:
     DEBUG = False
     
-ALLOWED_HOSTS = ['development.santhanabalan.ml','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['development.santhanabalan.tech','127.0.0.1','localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://development.santhanabalan.ml','http://127.0.0.1','http://localhost']
+CSRF_TRUSTED_ORIGINS = ['https://development.santhanabalan.tech','http://127.0.0.1','http://localhost']
 
 
 # Application definition
