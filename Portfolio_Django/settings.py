@@ -25,8 +25,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['portfolio.santhanabalan.ml','127.0.0.1','localhost']
-CSRF_TRUSTED_ORIGINS = ['https://portfolio.santhanabalan.ml']
+ALLOWED_HOSTS = ['portfolio.santhanabalan.tech','127.0.0.1','localhost']
+CSRF_TRUSTED_ORIGINS = ['https://portfolio.santhanabalan.tech']
 
 
 # Application definition
