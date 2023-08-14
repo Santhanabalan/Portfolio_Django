@@ -18,7 +18,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#Local env variables
+# Local env variables
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 Is_Production = os.getenv("IS_PRODUCTION")
 
@@ -29,14 +29,16 @@ Is_Production = os.getenv("IS_PRODUCTION")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if(os.getenv('DEBUG')=='True'):
+if (os.getenv('DEBUG') == 'True'):
     DEBUG = True
 else:
     DEBUG = False
-    
-ALLOWED_HOSTS = ['development.santhanabalan.tech','127.0.0.1','localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://development.santhanabalan.tech','http://127.0.0.1','http://localhost']
+ALLOWED_HOSTS = ['santhanabalan-765b749ff0d9.herokuapp.com',
+                 'portfolio.santhanabalan.tech', '127.0.0.1', 'localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://santhanabalan-765b749ff0d9.herokuapp.com/',
+                        'https://portfolio.santhanabalan.tech', 'http://127.0.0.1', 'http://localhost']
 
 
 # Application definition
@@ -48,14 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    #MyApps
+
+    # MyApps
     'main.apps.MainConfig',
     'dashboard.apps.DashboardConfig',
 
     'crispy_forms',
 
-    #Allauth
+    # Allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -121,7 +123,7 @@ if (Is_Production == 'False'):
     }
 else:
     DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+        "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
     }
 
 # Password validation
